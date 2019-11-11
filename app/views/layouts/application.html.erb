@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tech University</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <%= link_to 'home', root_path %>
+      <%= link_to 'about', about_path %>
+      <%= link_to 'new course', courses_new_path %>
+      <nav>
+        <div class="container nav-wrapper">
+          <a href="#" class="brand-logo">Tech University</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">New course</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <%= yield %>
+      </div>
+    </main>
+
+    <footer class="page-footer ">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Tech University</h5>
+            <p class="grey-text text-lighten-4">The future of development training</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Information</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Help</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2019 Tech University
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
