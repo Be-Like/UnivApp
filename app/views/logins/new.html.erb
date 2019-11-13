@@ -1,0 +1,21 @@
+<div class="container row center col s12 m12 l12">
+  <div class="row card-panel">
+    <h3 class="header">Log In</h3>
+    <%= form_for(:logins, html: {class: "col s12"}) do |f| %>
+      <div class="row input-field col s12">
+        <%= f.email_field :email, autofocus: true %>
+        <%= f.label :email %>
+      </div>
+
+      <div class="row input-field col s12">
+        <%= f.password_field :password %>
+        <%= f.label :password %>
+      </div>
+      
+      <div class="row input-field col s12">
+        <%= f.button '<i class="material-icons right">arrow_forward</i>Login'.html_safe, class: "btn orange waves-effect waves-light right" %>
+      </div>
+      
+    <% end %>
+  </div>
+</div>
